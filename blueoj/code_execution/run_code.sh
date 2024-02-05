@@ -1,0 +1,1 @@
+gcc blueoj/code_execution/cpp_code.cpp -o blueoj/code_execution/a.out -lstdc++

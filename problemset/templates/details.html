@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myproblem.name }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ myproblem.name }}</h1>
+  
+  <p>Problem ID: {{myproblem.id}}</p>
+  <p>Time Limit: {{ myproblem.time_limit}} seconds</p>
+  <p>Public Date: {{ myproblem.public_date }}</p><br>
+  <p>{{myproblem.statement | linebreaks}}</p><br>
+  <p>Input Format: {{myproblem.input_format | linebreaks}}</p><br>
+  <p>Output Format: {{myproblem.output_format | linebreaks}}</p><br>
+  <p>Sample Input: {{myproblem.sample_input | linebreaks}}</p>
+  <p>Sample Output: {{myproblem.sample_output | linebreaks}}</p><br>
+  <p><a href="/problemset/details/submit_code">Submit your code</a></p>
+  <p>Back to <a href="/problemset">problemset</a></p>
+  
+{% endblock %}
